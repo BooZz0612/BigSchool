@@ -2,6 +2,37 @@
     ViewBag.Title = "Home Page";
 }
 
+<ul class="course">
+    @foreach (var course in Model)
+            {
+                <li>
+                    <div class="date">
+                        <div class="month">
+                            @course.Datetime.ToString("MM")
+                        </div>
+                        <div class="day"
+                             @course.Datetime.ToString("dd")
+                    </div>
+                        <div class="detail">
+                            <span class="lecture">
+                                @course.Lecture.Name
+                            </span>
+                            <span class="category"
+                                  @course.Category.Name
+                        </div>
+                </li>
+            }
+</ul>
+<div class="row">
+    <ul>
+        @foreach (var course in Model)
+            {
+                <li>
+                    @course.Datetime - @course.Lecture.Name
+                </li>
+            }
+    </ul>
+</div>
 <main>
     <section class="row" aria-labelledby="aspnetTitle">
         <h1 id="title">ASP.NET</h1>

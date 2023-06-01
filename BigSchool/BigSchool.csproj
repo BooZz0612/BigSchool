@@ -196,6 +196,22 @@
     <Compile Include="Migrations\202305251556419_PopulateCategoryTable.designer.cs">
       <DependentUpon>202305251556419_PopulateCategoryTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202306011513372_CreateTableCourse1.cs" />
+    <Compile Include="Migrations\202306011513372_CreateTableCourse1.designer.cs">
+      <DependentUpon>202306011513372_CreateTableCourse1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202306011527336_AddNameColumnToApplicationUser.cs" />
+    <Compile Include="Migrations\202306011527336_AddNameColumnToApplicationUser.designer.cs">
+      <DependentUpon>202306011527336_AddNameColumnToApplicationUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202306011631249_AddNameColumnToApplicationUser1.cs" />
+    <Compile Include="Migrations\202306011631249_AddNameColumnToApplicationUser1.designer.cs">
+      <DependentUpon>202306011631249_AddNameColumnToApplicationUser1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202306011647324_AddNameColumnToApplicationUser2.cs" />
+    <Compile Include="Migrations\202306011647324_AddNameColumnToApplicationUser2.designer.cs">
+      <DependentUpon>202306011647324_AddNameColumnToApplicationUser2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CateGory.cs" />
@@ -320,6 +336,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202305251556419_PopulateCategoryTable.resx">
       <DependentUpon>202305251556419_PopulateCategoryTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202306011513372_CreateTableCourse1.resx">
+      <DependentUpon>202306011513372_CreateTableCourse1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202306011527336_AddNameColumnToApplicationUser.resx">
+      <DependentUpon>202306011527336_AddNameColumnToApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202306011631249_AddNameColumnToApplicationUser1.resx">
+      <DependentUpon>202306011631249_AddNameColumnToApplicationUser1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202306011647324_AddNameColumnToApplicationUser2.resx">
+      <DependentUpon>202306011647324_AddNameColumnToApplicationUser2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
