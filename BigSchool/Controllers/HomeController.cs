@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Data.Entity;
+using BigSchool.Models;
 
 namespace BigSchool.Controllers
 {
@@ -11,7 +12,11 @@ namespace BigSchool.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            var upcommingCourse = _dbContext.Coureses
+              .Include(c => c.Lecture)
+              .Include(c => c.Category)
+              .Where(c => c.Datetime > DateTime.Now);
+            return View(upcommingCourse);
         }
 
         public ActionResult About()
@@ -26,6 +31,11 @@ namespace BigSchool.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+        private ApplicationDbContext _dbContext;
+        public HomeController()
+        {
+            _dbContext = new ApplicationDbContext(); 
         }
     }
 }
