@@ -3,16 +3,17 @@ using BigSchool.ViewModel;
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
 namespace BigSchool.Controllers
 {
-    public class CourseController : Controller
+    public class CoursesController : Controller
     {
         private readonly ApplicationDbContext _dbContext;
-        public CourseController()
+        public CoursesController()
         {
             _dbContext = new ApplicationDbContext();
         }
@@ -20,7 +21,7 @@ namespace BigSchool.Controllers
         
         public ActionResult Create()
         {
-            var viewModel = new CourseViewModel
+            var viewModel = new CourseViewModel 
             {
                 Categories = _dbContext.Categories.ToList(),
             };
@@ -36,14 +37,14 @@ namespace BigSchool.Controllers
                 viewModel.Categories= _dbContext.Categories.ToList();
                 return View("Create", viewModel);
             }
-            var course = new Course
+            var courses = new Courses
             {
-                LectureId = User.Identity.GetUserId(),
-                Datetime = viewModel.GetDateTime(),
+                LecturerId = User.Identity.GetUserId(),
+                DateTime = viewModel.GetDateTime(),
                 CategoryId = viewModel.Category,
                 Place = viewModel.Place,
             };
-            _dbContext.Coureses.Add(course);
+            _dbContext.Coureses.Add(courses);
             _dbContext.SaveChanges();
 
             return RedirectToAction("Index", "Home");

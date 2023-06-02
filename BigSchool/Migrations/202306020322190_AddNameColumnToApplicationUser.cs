@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class AddNameColumnToApplicationUser1 : DbMigration
+    public partial class AddNameColumnToApplicationUser : DbMigration
     {
         public override void Up()
         {
