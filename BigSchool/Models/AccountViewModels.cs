@@ -81,7 +81,7 @@ namespace BigSchool.Models
         public string ConfirmPassword { get; set; }
 
         [Required]
-        [StringLength(225)]
+        [StringLength(255)]
         public string Name { get; set; }
     }
 

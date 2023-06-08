@@ -50,3 +50,6 @@ textarea {
     top : 0;
     left : 70px;
 }
+.dropdown-toggle :hover {
+    color:white;
+}

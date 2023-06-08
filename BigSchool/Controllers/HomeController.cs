@@ -16,11 +16,11 @@ namespace BigSchool.Controllers
         }
         public ActionResult Index()
         {
-            var upcommingCourse = _dbContext.Coureses
+            var upcommingCourses = _dbContext.Courses
               .Include(c => c.Lecturer)
               .Include(c => c.Category)
               .Where(c => c.DateTime > DateTime.Now);
-            return View(upcommingCourse);
+            return View(upcommingCourses);
         }
 
         public ActionResult About()
