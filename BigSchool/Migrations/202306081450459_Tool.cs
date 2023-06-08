@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class PopulateCategoryTable : DbMigration
+    public partial class Tool : DbMigration
     {
         public override void Up()
         {
