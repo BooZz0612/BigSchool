@@ -73,8 +73,17 @@ namespace BigSchool.Controllers
             return View(viewModel);
 
         }
+        public ActionResult Mine()
+        {
+            var userId = User.Identity.GetUserId();
+            var courses = _dbContext.Courses
+                .Where(c => c.LecturerId == userId && c.DateTime > DateTime.Now)
+                .Include(l => l.Lecturer)
+                .Include(l => l.Category)
+                .ToList();
+            return View(courses);
+        }
     }
-
 }
 
 
