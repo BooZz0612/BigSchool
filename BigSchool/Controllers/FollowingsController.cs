@@ -1,6 +1,6 @@
 ﻿
-using BigSchool.Models;
 using BigSchool.DTOs;
+using BigSchool.Models;
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
@@ -29,7 +29,7 @@ namespace BigSchool.Controllers
             if (_dbContext.Followings.Any(f => f.FollowerId == userId && f.FolloweeId == followingDto.FolloweeId))
                 return BadRequest("Following already exists!");
 
-            var folowing = new BigSchool.Models.Following
+            var folowing = new Models.Following
             {
                 FollowerId = userId,
 

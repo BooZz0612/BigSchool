@@ -40,7 +40,7 @@ textarea {
 }
 .course > li .date{
     text-align :center;
-    background-color: deepskyblue;
+    background-color: mediumpurple;
     color : white;
     width : 60px;
     border-radius : 8px;
@@ -51,5 +51,10 @@ textarea {
     left : 70px;
 }
 .dropdown-toggle :hover {
-    color:white;
+    color: white;
+}
+
+btn :hover {
+    color: white;
+    background-color: orangered;
 }
